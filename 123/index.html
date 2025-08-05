@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>
+ function k2() {
+            window.open('https://wa.me/', '_blank');
+        }
+</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Master Stock Investment Success</title>
+    <style>
+        :root {
+            --primary-gold: #FFD700;
+            --primary-navy: #1a365d;
+            --accent-blue: #0ea5e9;
+            --neutral-white: #ffffff;
+            --neutral-black: #000000;
+            --surface-dark: #2d3748;
+            --text-muted: #64748b;
+            --gradient-primary: linear-gradient(135deg, var(--primary-gold) 0%, #fbbf24 100%);
+            --gradient-secondary: linear-gradient(135deg, var(--primary-navy) 0%, #1e40af 100%);
+            --shadow-elevation: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .layout-container {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--surface-dark);
+            background: var(--neutral-white);
+            overflow-x: hidden;
+        }
+
+        .hero-section {
+            background: var(--gradient-secondary);
+            color: var(--neutral-white);
+            padding: 80px 20px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(255,215,0,0.1)" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+            animation: grid-float 20s linear infinite;
+        }
+
+        @keyframes grid-float {
+            0% { transform: translateX(0) translateY(0); }
+            100% { transform: translateX(-10px) translateY(-10px); }
+        }
+
+        .content-wrapper {
+            max-width: 1200px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .headline-primary {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 800;
+            margin-bottom: 24px;
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .description-text {
+            font-size: clamp(1.1rem, 2.5vw, 1.3rem);
+            margin-bottom: 40px;
+            opacity: 0.9;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .visual-element {
+            margin: 40px 0;
+            text-align: center;
+        }
+
+        .feature-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 16px;
+            box-shadow: var(--shadow-elevation);
+            max-height: 300px;
+            object-fit: cover;
+        }
+
+        .cta-button-primary {
+            display: inline-block;
+            background: var(--gradient-primary);
+            color: var(--neutral-black);
+            padding: 18px 36px;
+            font-size: 1.2rem;
+            font-weight: 700;
+            text-decoration: none;
+            border-radius: 50px;
+            box-shadow: var(--shadow-elevation);
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-button-primary::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+            transition: left 0.6s ease;
+        }
+
+        .cta-button-primary:hover::before {
+            left: 100%;
+        }
+
+        .cta-button-primary:hover {
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+        }
+
+        .content-section {
+            padding: 80px 20px;
+            background: var(--neutral-white);
+        }
+
+        .section-alternate {
+            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-title {
+            font-size: clamp(2rem, 4vw, 3rem);
+            font-weight: 700;
+            color: var(--primary-navy);
+            margin-bottom: 16px;
+        }
+
+        .section-subtitle {
+            font-size: clamp(1rem, 2vw, 1.2rem);
+            color: var(--text-muted);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            margin-top: 60px;
+        }
+
+        .feature-card {
+            background: var(--neutral-white);
+            padding: 40px 30px;
+            border-radius: 20px;
+            box-shadow: var(--shadow-elevation);
+            text-align: center;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .feature-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: var(--gradient-primary);
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--primary-gold);
+            box-shadow: 0 30px 60px -12px rgba(0, 0, 0, 0.15);
+        }
+
+        .feature-icon {
+            width: 80px;
+            height: 80px;
+            background: var(--gradient-primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 24px;
+            font-size: 2rem;
+            animation: pulse-icon 2s infinite;
+        }
+
+        @keyframes pulse-icon {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+
+        .feature-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-navy);
+            margin-bottom: 16px;
+        }
+
+        .feature-description {
+            color: var(--text-muted);
+            line-height: 1.8;
+        }
+
+        .testimonial-section {
+            padding: 80px 20px;
+            background: var(--gradient-secondary);
+            color: var(--neutral-white);
+            text-align: center;
+        }
+
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .testimonial-card {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 30px;
+            border-radius: 16px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .final-cta-section {
+            padding: 100px 20px;
+            background: var(--gradient-primary);
+            text-align: center;
+            color: var(--neutral-black);
+        }
+
+        .legal-disclaimer {
+            background: var(--surface-dark);
+            color: var(--neutral-white);
+            padding: 40px 20px;
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+
+        .disclaimer-content {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .disclaimer-title {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--primary-gold);
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .disclaimer-list {
+            list-style: none;
+            margin: 20px 0;
+        }
+
+        .disclaimer-list li {
+            margin: 8px 0;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .disclaimer-list li::before {
+            content: '*';
+            position: absolute;
+            left: 0;
+            color: var(--primary-gold);
+            font-weight: bold;
+        }
+
+        .footer-links {
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            text-align: center;
+        }
+
+        .footer-links a {
+            color: var(--primary-gold);
+            text-decoration: none;
+            margin: 0 20px;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: var(--neutral-white);
+        }
+
+        .whatsapp-float {
+            position: fixed;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: #25D366;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: var(--shadow-elevation);
+            cursor: pointer;
+            z-index: 1000;
+            animation: breathe 2s ease-in-out infinite;
+            transition: all 0.3s ease;
+        }
+
+        .whatsapp-float:hover {
+            transform: translateY(-50%) scale(1.1);
+        }
+
+        .whatsapp-float::before {
+            content: '💬';
+            font-size: 1.5rem;
+        }
+
+        .notification-badge {
+            position: absolute;
+            top: -5px;
+            right: -5px;
+            background: #ff4444;
+            color: white;
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.8rem;
+            font-weight: bold;
+            animation: bounce 1s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+            40% { transform: translateY(-10px); }
+            60% { transform: translateY(-5px); }
+        }
+
+        @keyframes breathe {
+            0%, 100% { transform: translateY(-50%) scale(1); }
+            50% { transform: translateY(-50%) scale(1.05); }
+        }
+
+        .floating-cta {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: var(--gradient-primary);
+            padding: 15px 20px;
+            z-index: 999;
+            animation: breathing 3s ease-in-out infinite;
+        }
+
+        .floating-cta-button {
+            width: 100%;
+            background: var(--primary-navy);
+            color: var(--neutral-white);
+            padding: 18px;
+            border: none;
+            border-radius: 12px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .floating-cta-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: left 0.8s ease;
+        }
+
+        .floating-cta-button:hover::before {
+            left: 100%;
+        }
+
+        @keyframes breathing {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-5px); }
+        }
+
+        @media (max-width: 768px) {
+            .hero-section {
+                padding: 60px 15px;
+            }
+            
+            .content-section {
+                padding: 60px 15px;
+            }
+            
+            .features-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+            
+            .whatsapp-float {
+                right: 15px;
+                width: 50px;
+                height: 50px;
+            }
+            
+            .floating-cta {
+                padding: 12px 15px;
+            }
+        }
+    </style>
+</head>
+<body class="layout-container">
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="content-wrapper">
+            <h1 class="headline-primary">Master the Secrets of Successful Stock Investment</h1>
+            <p class="description-text">
+                Most investors believe they can find good stocks just by relying on news and rumors. 
+                But the truth is, this approach often makes you miss real opportunities!
+            </p>
+            <div class="visual-element">
+                <img src="img/12.jpg" alt="Investment Success" class="feature-image">
+            </div>
+            <button class="cta-button-primary" onclick="k2()">Start Your Investment Learning Journey</button>
+        </div>
+    </section>
+
+    <!-- Main Content Section -->
+    <section class="content-section">
+        <div class="content-wrapper">
+            <div class="section-header">
+                <h2 class="section-title">Data-Driven Investment Excellence</h2>
+                <p class="section-subtitle">
+                    According to Morgan Stanley research, using data-driven investment strategies can significantly improve investment returns. 
+                    Join our professional investor community and gain access to:
+                </p>
+            </div>
+
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">📈</div>
+                    <h3 class="feature-title">Weekly Curated Stock Picks</h3>
+                    <p class="feature-description">
+                        We share a rigorously analyzed stock list every week with expected returns of 10% or higher. 
+                        Our expert team helps you identify the best investment opportunities to stand out in the competition.
+                    </p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🎯</div>
+                    <h3 class="feature-title">Learn Investment Strategies & Techniques</h3>
+                    <p class="feature-description">
+                        More than just stock recommendations, we teach you how to profit from financially sound stocks 
+                        and develop your own winning investment methodology.
+                    </p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🤝</div>
+                    <h3 class="feature-title">Connect with Like-minded Investors</h3>
+                    <p class="feature-description">
+                        In our community, you'll exchange experiences and share insights with other investors. 
+                        Through discussion and interaction, you'll gain valuable investment inspiration and confidence.
+                    </p>
+                </div>
+            </div>
+
+            <div class="visual-element">
+                <img src="img/4.jpg" alt="Community Success" class="feature-image">
+            </div>
+
+            <div style="text-align: center; margin-top: 50px;">
+                <button class="cta-button-primary" onclick="k2()">Get Weekly High-Return Stock Recommendations</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Proof Section -->
+    <section class="testimonial-section">
+        <div class="content-wrapper">
+            <h2 class="section-title" style="color: white;">Join Thousands of Successful Investors</h2>
+            <div class="testimonial-grid">
+                <div class="testimonial-card">
+                    <p>"The weekly stock picks have consistently outperformed my expectations."</p>
+                    <strong>- Professional Trader</strong>
+                </div>
+                <div class="testimonial-card">
+                    <p>"Finally found a community that shares actionable investment insights."</p>
+                    <strong>- Investment Enthusiast</strong>
+                </div>
+                <div class="testimonial-card">
+                    <p>"The educational content has transformed my investment approach completely."</p>
+                    <strong>- Portfolio Manager</strong>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA Section -->
+    <section class="final-cta-section">
+        <div class="content-wrapper">
+            <h2 class="section-title">Take Action Now, Transform Your Investment Future!</h2>
+            <p class="description-text" style="color: #1a365d;">
+                Don't hesitate any longer, opportunity is right in front of you! Click the button below to join our 
+                professional investor community and start your journey to investment success!
+            </p>
+            <button class="cta-button-primary" onclick="k2()" style="background: var(--gradient-secondary); color: white; margin-top: 30px; font-size: 1.3rem; padding: 20px 40px;">
+                Join Now - Get High-Return Stock Recommendations!
+            </button>
+        </div>
+    </section>
+
+    <!-- Legal Disclaimer -->
+    <section class="legal-disclaimer">
+        <div class="disclaimer-content">
+            <h3 class="disclaimer-title">⚠️ Important Risk Disclosure</h3>
+            <ul class="disclaimer-list">
+                <li>This service is for informational purposes only and does not provide any investment advisory services or financial product trading services.</li>
+                <li>The information provided is for reference only and should not be used as the basis for investment decisions.</li>
+                <li>You bear all risks for final investment decisions.</li>
+                <li>The accuracy of data is not guaranteed.</li>
+            </ul>
+            <div class="footer-links">
+                <a href="Privacy.html" target="_blank">Privacy Policy</a>
+                <a href="terms.html" target="_blank">Terms of Service</a>
+				 <a href="Disclaimer.html" target="_blank">Disclaimer</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- WhatsApp Float Button -->
+    <div class="whatsapp-float" onclick="k2()">
+        <div class="notification-badge">1</div>
+    </div>
+
+    <!-- Floating CTA -->
+    <div class="floating-cta">
+        <button class="floating-cta-button" onclick="k2()">
+            🚀 Join Investment Community - Get Weekly Stock Picks
+        </button>
+    </div>
+
+    <script>
+       
+
+        // Prevent zoom on mobile
+        document.addEventListener('gesturestart', function (e) {
+            e.preventDefault();
+        });
+
+        // Add smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Add intersection observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe all feature cards
+        document.querySelectorAll('.feature-card').forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(30px)';
+            card.style.transition = 'all 0.6s ease';
+            observer.observe(card);
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>
+ function k3() {
+            window.open('https://m.me/121881294238514', '_blank');
+        }
+
+        function M2() {
+            window.open('https://m.me/121881294238514', '_blank');
+        }
+</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1.0, minimum-scale=1.0">
+    <title>چینی اسکریچ لاٹری</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            background: linear-gradient(135deg, #1a472a 0%, #2d5a3d 25%, #1a472a 50%, #0d2818 75%, #000 100%);
+            color: #fff;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, rgba(26, 71, 42, 0.95), rgba(45, 90, 61, 0.95)), 
+                        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="stars" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse"><circle cx="10" cy="10" r="1" fill="%23ffd700" opacity="0.3"/></pattern></defs><rect width="100" height="100" fill="url(%23stars)"/></svg>');
+            padding: 80px 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255, 215, 0, 0.1) 0%, transparent 70%);
+            animation: rotate 20s linear infinite;
+        }
+
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: bold;
+            margin-bottom: 20px;
+            background: linear-gradient(45deg, #ffd700, #fff700, #ffd700);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-shadow: 0 4px 8px rgba(0,0,0,0.3);
+            animation: glow 2s ease-in-out infinite alternate;
+        }
+
+        @keyframes glow {
+            from { filter: drop-shadow(0 0 20px rgba(255, 215, 0, 0.5)); }
+            to { filter: drop-shadow(0 0 30px rgba(255, 215, 0, 0.8)); }
+        }
+
+        .hero-subtitle {
+            font-size: clamp(1.1rem, 3vw, 1.5rem);
+            margin-bottom: 30px;
+            color: #e8f5e8;
+        }
+
+        .hero-image {
+            width: 100%;
+            max-width: 500px;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 20px;
+            margin: 30px auto;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.4);
+            transition: transform 0.3s ease;
+        }
+
+        .hero-image:hover {
+            transform: scale(1.05);
+        }
+
+        .cta-button {
+            background: linear-gradient(45deg, #ffd700, #ffed4e, #ffd700);
+            color: #1a472a;
+            padding: 18px 40px;
+            font-size: 1.3rem;
+            font-weight: bold;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            box-shadow: 0 8px 25px rgba(255, 215, 0, 0.4);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: left 0.5s;
+        }
+
+        .cta-button:hover::before {
+            left: 100%;
+        }
+
+        .cta-button {
+            animation: buttonBreathe 3s ease-in-out infinite;
+        }
+
+        @keyframes buttonBreathe {
+            0%, 100% { transform: scale(1); box-shadow: 0 8px 25px rgba(255, 215, 0, 0.4); }
+            50% { transform: scale(1.03); box-shadow: 0 12px 35px rgba(255, 215, 0, 0.6); }
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 15px 40px rgba(255, 215, 0, 0.7);
+            animation-play-state: paused;
+        }
+
+        /* Features Section */
+        .features {
+            padding: 80px 0;
+            background: linear-gradient(135deg, rgba(45, 90, 61, 0.3), rgba(26, 71, 42, 0.3));
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: clamp(2rem, 4vw, 3rem);
+            margin-bottom: 60px;
+            color: #ffd700;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+
+        .feature-card {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
+            padding: 30px;
+            border-radius: 20px;
+            text-align: center;
+            border: 1px solid rgba(255, 215, 0, 0.2);
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.08));
+            border-color: rgba(255, 215, 0, 0.4);
+        }
+
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        .feature-title {
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+            color: #ffd700;
+        }
+
+        .feature-desc {
+            color: #e8f5e8;
+            line-height: 1.7;
+        }
+
+        /* Products Section */
+        .products {
+            padding: 80px 0;
+            background: linear-gradient(135deg, rgba(13, 40, 24, 0.8), rgba(26, 71, 42, 0.8));
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+
+        .product-card {
+            background: linear-gradient(135deg, rgba(255, 215, 0, 0.1), rgba(255, 215, 0, 0.05));
+            padding: 30px;
+            border-radius: 20px;
+            border: 2px solid rgba(255, 215, 0, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .product-card:hover {
+            border-color: #ffd700;
+            box-shadow: 0 15px 40px rgba(255, 215, 0, 0.2);
+        }
+
+        .product-title {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: #ffd700;
+        }
+
+        .product-desc {
+            color: #e8f5e8;
+            margin-bottom: 20px;
+        }
+
+        /* Promotions */
+        .promotions {
+            padding: 80px 0;
+            background: linear-gradient(135deg, rgba(26, 71, 42, 0.9), rgba(45, 90, 61, 0.9));
+        }
+
+        .promo-list {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
+            padding: 40px;
+            border-radius: 20px;
+            margin-bottom: 40px;
+            border: 1px solid rgba(255, 215, 0, 0.3);
+        }
+
+        .promo-item {
+            padding: 15px 0;
+            border-bottom: 1px solid rgba(255, 215, 0, 0.2);
+            font-size: 1.1rem;
+        }
+
+        .promo-item:last-child {
+            border-bottom: none;
+        }
+
+        /* How to Buy */
+        .how-to-buy {
+            padding: 80px 0;
+            background: linear-gradient(135deg, rgba(45, 90, 61, 0.6), rgba(13, 40, 24, 0.6));
+        }
+
+        .steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .step {
+            text-align: center;
+            padding: 30px;
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
+            border-radius: 20px;
+            border: 1px solid rgba(255, 215, 0, 0.2);
+        }
+
+        .step-number {
+            background: #ffd700;
+            color: #1a472a;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin: 0 auto 20px;
+        }
+
+        /* Warning */
+        .warning {
+            padding: 60px 0;
+            background: linear-gradient(135deg, rgba(13, 40, 24, 0.9), rgba(0, 0, 0, 0.9));
+            text-align: center;
+        }
+
+        .warning-content {
+            background: linear-gradient(135deg, rgba(255, 69, 0, 0.1), rgba(255, 140, 0, 0.1));
+            padding: 30px;
+            border-radius: 20px;
+            border: 2px solid rgba(255, 140, 0, 0.5);
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* Final CTA */
+        .final-cta {
+            padding: 80px 0;
+            text-align: center;
+            background: linear-gradient(135deg, rgba(26, 71, 42, 1), rgba(45, 90, 61, 1));
+        }
+
+        /* Floating Banner */
+        .floating-banner {
+            position: fixed;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 90%;
+            max-width: 500px;
+            background: linear-gradient(45deg, #ffd700, #ffed4e);
+            padding: 20px;
+            border-radius: 20px 20px 0 0;
+            text-align: center;
+            box-shadow: 0 -10px 30px rgba(0,0,0,0.3);
+            z-index: 1000;
+            animation: breathe 3s ease-in-out infinite;
+        }
+
+        /* Messenger Button */
+        .messenger-btn {
+            position: fixed;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+            z-index: 1001;
+            transition: all 0.3s ease;
+            animation: messengerPulse 2s ease-in-out infinite;
+            text-align: center;
+        }
+
+        @keyframes messengerPulse {
+            0%, 100% { transform: translateY(-50%) scale(1); }
+            50% { transform: translateY(-50%) scale(1.1); }
+        }
+
+        .messenger-btn:hover {
+            transform: translateY(-50%) scale(1.15);
+        }
+
+        .messenger-icon {
+            width: 50px;
+            height: 50px;
+            object-fit: cover;
+            border-radius: 8px;
+            display: block;
+        }
+
+        .messenger-text {
+            font-size: 10px;
+            color: #fff;
+            margin-top: 5px;
+            font-weight: bold;
+            text-shadow: 0 1px 2px rgba(0,0,0,0.8);
+        }
+
+        .messenger-badge {
+            position: absolute;
+            top: -5px;
+            right: -5px;
+            background: #ff4757;
+            color: white;
+            border-radius: 50%;
+            width: 22px;
+            height: 22px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            font-weight: bold;
+            animation: badgeBounce 1.5s ease-in-out infinite;
+        }
+
+        @keyframes badgeBounce {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.3); }
+        }
+
+        @keyframes breathe {
+            0%, 100% { transform: translateX(-50%) scale(1); }
+            50% { transform: translateX(-50%) scale(1.05); }
+        }
+
+        .floating-banner button {
+            background: #1a472a;
+            color: #ffd700;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 25px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+        }
+
+        .floating-banner button:hover {
+            background: #0d2818;
+            transform: scale(1.05);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero {
+                padding: 40px 0;
+            }
+            
+            .features, .products, .promotions, .how-to-buy, .final-cta {
+                padding: 40px 0;
+            }
+            
+            .warning {
+                padding: 30px 0;
+            }
+            
+            .container {
+                padding: 0 15px;
+            }
+            
+            .section-title {
+                margin-bottom: 30px;
+            }
+            
+            .features-grid, .product-grid {
+                gap: 20px;
+                margin-bottom: 30px;
+            }
+            
+            .feature-card, .product-card, .step {
+                padding: 20px;
+            }
+            
+            .promo-list {
+                padding: 25px;
+                margin-bottom: 25px;
+            }
+            
+            .hero-image {
+                height: 200px;
+                margin: 20px auto;
+            }
+            
+            .hero h1 {
+                margin-bottom: 15px;
+            }
+            
+            .hero-subtitle {
+                margin-bottom: 20px;
+            }
+            
+            .steps {
+                gap: 20px;
+                margin-bottom: 25px;
+            }
+            
+            .warning-content {
+                padding: 20px;
+            }
+            
+            .floating-banner {
+                width: 95%;
+                padding: 15px;
+            }
+            
+            .final-cta p {
+                margin-bottom: 20px !important;
+            }
+        }
+    </style>
+</head>
+<body>
+   <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>اليانصيب الصيني الخدش</h1>
+                <h2>جوائز فورية - الجائزة الكبرى مليون يوان تنتظرك للفوز بها!</h2>
+                <p class="hero-subtitle">(مصمم خصيصًا للاعبين الباكستانيين بمعدل فوز 100%، استرداد فوري للجوائز، كل خدش يجلب السعادة والثروة)</p>
+                <img src="img/1.jpg" alt="Scratch Cards" class="hero-image">
+                <div style="margin: 30px 0;">
+                    <button class="cta-button" onclick="k3()">اربح الآن 10 ملايين روبية باكستانية!</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <h2 class="section-title">🔥 لماذا تختار بطاقات الخدش لدينا؟</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <span class="feature-icon">⚡</span>
+                    <h3 class="feature-title">ربح فوري وصرف الجوائز!</h3>
+                    <p class="feature-desc">لا داعي للانتظار، سحب الجوائز مباشرة في غرفة البث المباشر، استرداد الجوائز مباشرة، دون الحاجة إلى رسوم إضافية</p>
+                </div>
+                <div class="feature-card">
+                    <span class="feature-icon">🎯</span>
+                    <h3 class="feature-title">معدل فوز 100% - لا خسارة أبدًا!</h3>
+                    <p class="feature-desc">كل مجموعة من بطاقات الخدش تحتوي على جائزة! عائد مضمون للحد الأدنى لضمان متعة الخدش واللعب براحة بال</p>
+                </div>
+                <div class="feature-card">
+                    <span class="feature-icon">🎮</span>
+                    <h3 class="feature-title">ألعاب متعددة - متعة لا تنتهي!</h3>
+                    <p class="feature-desc">مطابقة الأرقام الكلاسيكية، رموز الفوز، مضاعفات الجوائز... ألعاب متنوعة للاختيار منها - كلما خدشت أكثر، كلما أصبحت أكثر إدمانًا!</p>
+                </div>
+                <div class="feature-card">
+                    <span class="feature-icon">🛡️</span>
+                    <h3 class="feature-title">آمن وقانوني - ترخيص رسمي!</h3>
+                    <p class="feature-desc">توزيع مرخص رسميًا، جوائز مضمونة، استرداد خالي من القلق - العب براحة بال!</p>
+                </div>
+            </div>
+            <div style="text-align: center;">
+                <img src="img/2.jpg" alt="Scratch Game" style="max-width: 100%; height: 300px; object-fit: cover; border-radius: 15px; margin: 20px 0;">
+                <div>
+                    <button class="cta-button" onclick="k3()">جرب حظك اليوم!</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="products">
+        <div class="container">
+            <h2 class="section-title">🎁 بطاقات الخدش المميزة</h2>
+            <div class="product-grid">
+                <div class="product-card">
+                    <h3 class="product-title">💎 ملك الثروة - الجائزة الكبرى 10 ملايين روبية باكستانية!</h3>
+                    <p class="product-desc">اخدش الرقم للفوز بالجائزة. كل بطاقة تحمل فرصة للفوز بالجائزة الكبرى.</p>
+                </div>
+                <div class="product-card">
+                    <h3 class="product-title">✨ الحظ 777 - مضاعف الجائزة ×5!</h3>
+                    <p class="product-desc">اخدش "777" لتحصل على 5 أضعاف الجائزة المقابلة! معدل فوز مرتفع جدًا - مثالي للمبتدئين!</p>
+                </div>
+                <div class="product-card">
+                    <h3 class="product-title">💰 عاصفة النقود - نقد فوري!</h3>
+                    <p class="product-desc">اخدش رموز "حقيبة النقود" للحصول على استبدال نقدي فوري! الحد الأدنى 100 روبية باكستانية، الحد الأقصى 500,000 روبية باكستانية!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Promotions -->
+    <section class="promotions">
+        <div class="container">
+            <h2 class="section-title">📢 عروض ترويجية مذهلة</h2>
+            <div class="promo-list">
+                <div class="promo-item">🎯 <strong>عرض خاص للمستخدمين الجدد:</strong> احصل على 5 بطاقات خدش مجانية مع أول طلب بقيمة 4000 روبية باكستانية أو أكثر</div>
+                <div class="promo-item">💥 <strong>مكافأة العملاء العائدين:</strong> أنفق ما مجموعه 5000 روبية باكستانية، وادخل السحب على جائزة مليون روبية باكستانية الكبرى!</div>
+                <div class="promo-item">🚀 <strong>عرض محدود الوقت:</strong> خدش في عطلة نهاية الأسبوع - تضاعف جميع الجوائز!</div>
+            </div>
+            <div style="text-align: center;">
+                <img src="img/3.jpg" alt="Promotions" style="max-width: 100%; height: 300px; object-fit: cover; border-radius: 15px; margin: 20px 0;">
+                <div>
+                    <button class="cta-button" onclick="k3()">اطلب الآن - دفع الجوائز الفوري!</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How to Buy -->
+    <section class="how-to-buy">
+        <div class="container">
+            <h2 class="section-title">📱 كيف تشتري؟ سهل جدًا!</h2>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>الشراء من المتاجر</h3>
+                    <p>متوفر في المتاجر، محطات اليانصيب، والمولات - اشتر وخدش فورًا!</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>الشراء عبر الإنترنت</h3>
+                    <p>اطلب عبر المنصات الرسمية للشركاء - آمن، مريح، توصيل إلى المنزل!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Warning -->
+    <section class="warning">
+        <div class="container">
+            <h2 class="section-title">⚠️ إشعار هام</h2>
+            <div class="warning-content">
+                <p style="margin-bottom: 15px;"><strong>🔞 ممنوع للأعمار أقل من 18 سنة.</strong></p>
+                <p><strong>💡 العب بمسؤولية، ضمن إمكانياتك. استمتع بمتعة الخدش، وتجنب الإدمان.</strong></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="final-cta">
+        <div class="container">
+            <h2 class="section-title">🎯 اتخذ الخطوة الآن - خدش حياتك بمليون روبية باكستانية!</h2>
+            <p style="font-size: 1.3rem; margin-bottom: 30px; color: #ffd700;">💰 خدشة واحدة، مفاجأة واحدة - الحظ الجيد لا يتوقف!</p>
+            <p style="font-size: 1.5rem; margin-bottom: 40px;">هل ستكون أنت الفائز المحظوظ التالي؟</p>
+            <button class="cta-button" onclick="k3()">ابدأ الربح الآن!</button>
+        </div>
+    </section>
+
+    <!-- Floating Banner -->
+    <div class="floating-banner">
+        <div style="color: #1a472a; font-weight: bold; margin-bottom: 10px; font-size: 1.1rem;">💰 جرب حظك اليوم!</div>
+        <button onclick="k3()">اخدش واربح الآن!</button>
+    </div>
+
+    <!-- Messenger Button -->
+    <div class="messenger-btn" onclick="M2()">
+        <img src="https://www.yumk718a.shop/msg.jpg" alt="Message" class="messenger-icon">
+        <div class="messenger-badge">1</div>
+        <div class="messenger-text">الدعم</div>
+    </div>
+
+    <script>
+       
+
+        // Dark mode detection
+        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            document.documentElement.classList.add('dark');
+        }
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
+            if (event.matches) {
+                document.documentElement.classList.add('dark');
+            } else {
+                document.documentElement.classList.remove('dark');
+            }
+        });
+
+        // Smooth scroll for better UX
+        document.addEventListener('DOMContentLoaded', function() {
+            // Add some interactive sparkle effects
+            setInterval(function() {
+                const sparkle = document.createElement('div');
+                sparkle.style.cssText = `
+                    position: fixed;
+                    width: 4px;
+                    height: 4px;
+                    background: #ffd700;
+                    border-radius: 50%;
+                    pointer-events: none;
+                    z-index: 999;
+                    left: ${Math.random() * window.innerWidth}px;
+                    top: ${Math.random() * window.innerHeight}px;
+                    animation: sparkle 2s ease-out forwards;
+                `;
+                document.body.appendChild(sparkle);
+                
+                setTimeout(() => sparkle.remove(), 2000);
+            }, 3000);
+        });
+
+        // Add sparkle animation
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes sparkle {
+                0% { opacity: 1; transform: scale(0); }
+                50% { opacity: 1; transform: scale(1); }
+                100% { opacity: 0; transform: scale(0); }
+            }
+        `;
+        document.head.appendChild(style);
+    </script>
+</body>
+</html>

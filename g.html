@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <!-- Event snippet for https://www.kh526era.shop/g.html conversion page -->
+<script>
+  gtag('event', 'conversion', {
+      'send_to': 'AW-17178656475/bWucCNbHkNgaENv9tf8_',
+      'value': 2.0,
+      'currency': 'USD'
+  });
+</script>
+
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-17178656475"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'AW-17178656475');
+</script>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>AIによる分析</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        :root {
+            --primary-yellow: #FFD000;
+            --deep-sea-blue: #003366;
+            --deep-sea-light: #004080;
+            --deep-sea-dark: #002040;
+            --accent-yellow: #FFCC00;
+            --text-light: #FFFFFF;
+            --text-dark: #001A41;
+            --bg-light: #F0F5FF;
+        }
+        
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+            background-color: var(--deep-sea-dark);
+            color: var(--text-light);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        .ai-grid-bg {
+            background-image: 
+                linear-gradient(rgba(255, 208, 0, 0.05) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255, 208, 0, 0.05) 1px, transparent 1px);
+            background-size: 20px 20px;
+            position: relative;
+        }
+        
+        .ai-grid-bg::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 30% 20%, rgba(255, 208, 0, 0.10), transparent 40%),
+                         radial-gradient(circle at 70% 60%, rgba(0, 51, 102, 0.15), transparent 40%);
+            z-index: 0;
+        }
+        
+        .ai-gradient {
+            background: linear-gradient(135deg, var(--deep-sea-blue), var(--deep-sea-dark));
+        }
+        
+        .tech-card {
+            background: rgba(0, 51, 102, 0.3);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 208, 0, 0.1);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .tech-card::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+            transition: 0.5s;
+        }
+        
+        .tech-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+            border-color: rgba(255, 208, 0, 0.3);
+        }
+        
+        .tech-card:hover::after {
+            left: 100%;
+        }
+        
+        .kabu-icon {
+            background: linear-gradient(135deg, var(--primary-yellow), #FFA800);
+            color: var(--deep-sea-dark);
+            border-radius: 12px;
+            width: 48px;
+            height: 48px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 8px rgba(255, 208, 0, 0.3);
+        }
+        
+        @keyframes pulse-btn {
+            0% { box-shadow: 0 0 0 0 rgba(255, 208, 0, 0.7); }
+            70% { box-shadow: 0 0 0 15px rgba(255, 208, 0, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(255, 208, 0, 0); }
+        }
+        
+        @keyframes float-btn {
+            0%, 100% { transform: translateY(0) scale(1); }
+            50% { transform: translateY(-3px) scale(1.02); }
+        }
+        
+        .pulse-btn {
+            background: linear-gradient(135deg, var(--primary-yellow), #FFA800);
+            color: var(--deep-sea-dark);
+            font-weight: 700;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+            animation: pulse-btn 2s infinite, float-btn 3s ease-in-out infinite;
+        }
+        
+        .pulse-btn:hover {
+            background: linear-gradient(135deg, #FFA800, var(--primary-yellow));
+        }
+        
+        .tech-highlight {
+            background: linear-gradient(to right, var(--text-light), var(--primary-yellow));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            color: transparent;
+        }
+        
+        .kabu-divider {
+            height: 3px;
+            background: linear-gradient(to right, var(--deep-sea-light), var(--primary-yellow));
+            width: 100px;
+            margin: 1rem auto;
+        }
+        
+        /* 進行バーのアニメーション */
+        .progress-container {
+            width: 100%;
+            height: 8px;
+            background-color: rgba(255, 255, 255, 0.2);
+            border-radius: 4px;
+            margin: 1rem 0;
+            overflow: hidden;
+        }
+        
+        .progress-bar {
+            height: 100%;
+            width: 0%;
+            background: linear-gradient(to right, var(--deep-sea-blue), var(--primary-yellow));
+            border-radius: 4px;
+            transition: width 2s ease;
+        }
+        
+        /* ポップアップのスタイリング */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.6);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .modal-content {
+            background-color: var(--deep-sea-blue);
+            color: var(--text-light);
+            padding: 2rem;
+            border-radius: 8px;
+            max-width: 500px;
+            width: 90%;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            transform: scale(0.8);
+            opacity: 0;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 208, 0, 0.3);
+            position: relative;
+        }
+        
+        .modal.show .modal-content {
+            transform: scale(1);
+            opacity: 1;
+        }
+        
+        .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background: rgba(255, 208, 0, 0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            border: 1px solid rgba(255, 208, 0, 0.3);
+        }
+        
+        .close-btn:hover {
+            background: rgba(255, 208, 0, 0.4);
+        }
+        
+        .close-btn::before,
+        .close-btn::after {
+            content: '';
+            position: absolute;
+            width: 15px;
+            height: 2px;
+            background-color: var(--primary-yellow);
+        }
+        
+        .close-btn::before {
+            transform: rotate(45deg);
+        }
+        
+        .close-btn::after {
+            transform: rotate(-45deg);
+        }
+        
+        /* 株式入力スタイリング */
+        .stock-input {
+            background-color: rgba(0, 51, 102, 0.2);
+            border: 2px solid rgba(255, 208, 0, 0.3);
+            color: var(--text-light);
+            border-radius: 8px;
+            padding: 10px 16px;
+            font-size: 1rem;
+            width: 100%;
+            transition: all 0.3s ease;
+            outline: none;
+        }
+        
+        .stock-input:focus {
+            border-color: var(--primary-yellow);
+            box-shadow: 0 0 0 3px rgba(255, 208, 0, 0.2);
+        }
+        
+        .stock-input::placeholder {
+            color: rgba(255, 255, 255, 0.5);
+        }
+        
+        /* アニメーションパーティクル */
+        .particles {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: 0;
+        }
+        
+        .particle {
+            position: absolute;
+            background-color: var(--primary-yellow);
+            border-radius: 50%;
+            animation: float 10s infinite ease-in-out;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(5deg); }
+        }
+        
+        /* 点滅カーソル効果 */
+        .cursor {
+            display: inline-block;
+            width: 3px;
+            height: 1em;
+            background-color: var(--primary-yellow);
+            margin-left: 2px;
+            animation: blink 1s step-end infinite;
+            vertical-align: text-bottom;
+        }
+        
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0; }
+        }
+        
+        /* 入力グループスタイリング */
+        .input-group {
+            position: relative;
+            margin-bottom: 1.5rem;
+        }
+        
+        .input-icon {
+            position: absolute;
+            top: 50%;
+            right: 12px;
+            transform: translateY(-50%);
+            color: var(--primary-yellow);
+        }
+    </style>
+</head>
+<body>
+    <div class="ai-grid-bg min-h-screen relative">
+        <!-- 背景パーティクル -->
+        <div class="particles" id="particles"></div>
+        
+        <!-- ヘッダーセクション -->
+        <header class="pt-12 pb-6 relative z-10">
+            <div class="container mx-auto px-4 max-w-6xl">
+                <div class="text-center">
+                    <h1 class="text-3xl md:text-5xl font-bold mb-2">
+                        <span class="tech-highlight">AI</span>による分析
+                    </h1>
+                    <div class="kabu-divider"></div>
+                    <p class="text-lg md:text-xl max-w-3xl mx-auto">
+                        最新のAI技術で株式市場データを分析し、より賢明な投資判断をサポート
+                    </p>
+                </div>
+            </div>
+        </header>
+
+        <!-- ヒーローセクション -->
+        <section class="py-8 relative z-10">
+            <div class="container mx-auto px-4 max-w-6xl">
+                <div class="flex flex-col md:flex-row items-center gap-8">
+                    <div class="md:w-1/2">
+                        <h2 class="text-2xl md:text-3xl font-bold mb-4">
+                            <span class="tech-highlight">AI</span>による分析
+                        </h2>
+                        
+                        <div class="p-4 bg-blue-900/30 border-l-4 border-yellow-400 rounded mb-6">
+                            <p class="font-medium mb-4">
+                                🔍 株式コードを入力して、AI分析レポートを取得
+                            </p>
+                            <div class="input-group">
+                                <input type="text" id="stockCodeInput" class="stock-input" placeholder="" />
+                                <div class="input-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                        <path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd" />
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mb-8">
+                            <button id="analyzeBtn" class="pulse-btn px-8 py-4 rounded-lg text-lg shadow-xl" onclick="showProgress()">
+                                👉 無料で分析を生成
+                            </button>
+                        </div>
+                        <div class="flex items-center bg-blue-900/30 p-3 rounded-lg">
+                            <div class="mr-3">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-yellow-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+                                </svg>
+                            </div>
+                            <p>
+                                📊 リアルタイムデータ更新、現在のアクティブユーザー：<span class="font-bold">32,239</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="md:w-1/2">
+                        <div class="relative rounded-xl overflow-hidden shadow-2xl transform transition-transform hover:scale-105">
+                            <div class="absolute inset-0 bg-gradient-to-r from-blue-900/20 to-yellow-500/20 mix-blend-overlay"></div>
+                            <img src="1.jpg" alt="AIデータ分析" class="w-full rounded-xl" onerror="this.src='https://via.placeholder.com/600x400?text=AI%E3%83%87%E3%83%BC%E3%82%BF%E5%88%86%E6%9E%90'">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 特徴セクション -->
+        <section class="py-10 relative z-10">
+            <div class="container mx-auto px-4 max-w-6xl">
+                <div class="text-center mb-10">
+                    <h2 class="text-2xl md:text-3xl font-bold mb-2">
+                        🤖 <span class="tech-highlight">AI分析ツール</span>の特徴
+                    </h2>
+                    <div class="kabu-divider"></div>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="tech-card p-6 rounded-xl">
+                        <div class="flex items-start mb-4">
+                            <div class="kabu-icon mr-4 flex-shrink-0">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-xl mb-2 text-yellow-400">✅ データ統合能力が強力</h3>
+                                <ul class="list-disc pl-5 space-y-2">
+                                    <li>市場動向、財務指標、ニュースセンチメントなどの公開データを集約</li>
+                                    <li>構造化された分析を提供し、意思決定の参考をサポート</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="tech-card p-6 rounded-xl">
+                        <div class="flex items-start mb-4">
+                            <div class="kabu-icon mr-4 flex-shrink-0">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-xl mb-2 text-yellow-400">✅ アルゴリズムモデルの最適化</h3>
+                                <ul class="list-disc pl-5 space-y-2">
+                                    <li>過去のデータに基づいてトレーニングされ、潜在的なトレンドを識別</li>
+                                    <li>短期/中期戦略のバックテストをサポート（予測ではありません）</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mt-10 p-6 bg-blue-900/30 border-l-4 border-yellow-400 rounded-r-lg shadow-md">
+                    <h3 class="font-bold text-xl mb-2 text-yellow-400">⚠️ 重要な注意点</h3>
+                    <ul class="list-disc pl-5 space-y-2">
+                        <li><strong>AI分析 ≠ 投資アドバイス</strong>、データ参考用のみ</li>
+                        <li>市場の変動は予測不可能であり、実際のリターンは分析結果と異なる可能性があります</li>
+                        <li>投資にはリスクが伴います。決断は慎重に</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        
+
+        <!-- フッター/免責事項 -->
+        <footer class="py-10 bg-[var(--deep-sea-dark)] text-white relative z-10">
+            <div class="container mx-auto px-4 max-w-6xl">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+                    <div>
+                        <h3 class="text-xl font-bold mb-4 text-[var(--primary-yellow)]">免責事項</h3>
+                        <p class="text-sm mb-4">
+                            このAI株式分析ツール（以下、「本ツール」といいます）は、過去のデータや公開情報に基づいたアルゴリズム分析のみを提供するものであり、証券の売買に関するいかなる形式の投資助言、推奨、保証を構成するものではありません。
+このツールの分析結果は個人的な研究参考用であり、投資判断の唯一の根拠として使用することはできません。
+                        </p>
+                        <p class="text-sm">
+                            過去のデータは将来のパフォーマンスを示すものではありません。AI モデルは過去の市場データに基づいてトレーニングされますが、市場環境、ポリシーの変更、緊急事態などの要因により、実際の傾向が予測と異なる場合があります。
+​​アルゴリズムの精度が限られている​​：このツールのモデル精度は約 80% ～ 90%（バックテスト データに基づく）であり、予測結果の正確性は保証されません。
+​​情報の遅延​​：市場データには10〜30分の遅延があり（取引所によって異なります）、リアルタイムのパフォーマンスには制限があります。
+ブラックスワンイベントを予測できない: AI モデルは、金融危機、戦争、政策変更などの極端なイベントを事前に特定できません
+                        </p>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold mb-4 text-[var(--primary-yellow)]">プライバシーポリシー</h3>
+                        <p class="text-sm mb-4">
+                          株式市場は非常にリスクが高く、価格変動により元本の損失、さらには全額の損失が発生する可能性があります。
+レバレッジやデリバティブなどの高リスク投資は損失を拡大させる可能性があります。ご自身のリスク許容度を慎重に評価してください。
+短期取引はリスクが高く、頻繁に操作すると取引コストと損失の可能性が増す可能性があります。
+                        </p>
+                        <p class="text-sm">
+                            ユーザーデータは、サービスの提供および改善、法的義務の遵守、および明示的な同意を得た目的のためにのみ使用されます。当社はユーザーの事前の同意なしに、個人データを第三者と共有することはありません。
+                        </p>
+                    </div>
+                </div>
+                <div class="text-center text-sm text-gray-400 border-t border-gray-700 pt-6">
+                    <p>© 2023 AI株式分析ツール. All Rights Reserved.</p>
+                </div>
+            </div>
+        </footer>
+
+        <!-- 固定CTAボタン -->
+        <div class="fixed bottom-5 left-0 right-0 flex justify-center z-50">
+            <button class="pulse-btn px-10 py-4 rounded-full text-lg shadow-xl whitespace-nowrap" onclick="opensitewe()">
+                お問い合わせ
+            </button>
+        </div>
+
+        <!-- 進行バーモーダル -->
+        <div id="progressModal" class="modal">
+            <div class="modal-content p-6 rounded-xl shadow-2xl max-w-md w-11/12">
+                <div class="close-btn" onclick="closeModal('progressModal')"></div>
+                <h3 class="text-xl font-bold mb-4 text-[var(--primary-yellow)]">AI分析を生成中...</h3>
+                <p class="mb-4">AI系システムが次の要素を分析しています：</p>
+                <ul class="text-left mb-4 space-y-2">
+                    <li class="flex items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-yellow-400 mr-2" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                        </svg>
+                        市場分析
+                    </li>
+                    <li class="flex items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-yellow-400 mr-2" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                        </svg>
+                        最新ニュース分析
+                    </li>
+                    <li class="flex items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-yellow-400 mr-2" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                        </svg>
+                        過去データ分析
+                    </li>
+                </ul>
+                <div class="progress-container">
+                    <div class="progress-bar" id="progressBar"></div>
+                </div>
+                <p class="text-sm text-gray-300">しばらくお待ちください...</p>
+            </div>
+        </div>
+
+        <!-- 結果モーダル -->
+        <div id="resultModal" class="modal">
+            <div class="modal-content p-6 rounded-xl shadow-2xl max-w-md w-11/12">
+                <div class="close-btn" onclick="closeModal('resultModal')"></div>
+                <div class="bg-yellow-400/20 p-2 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-yellow-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                    </svg>
+                </div>
+                <h3 class="text-xl font-bold mb-2 text-center text-[var(--primary-yellow)]">分析レポートが完成しました！</h3>
+                <p class="mb-6 text-center">
+                    下記のLINEリンクをクリックして、詳細なレポートを受け取ってください。
+                </p>
+                <button class="pulse-btn w-full py-3 rounded-lg font-bold" onclick="opensitewe()">
+                    LINEでレポートを受け取る
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // アニメーションパーティクルの作成
+        function createParticles() {
+            const particlesContainer = document.getElementById('particles');
+            const particleCount = 20;
+            
+            for (let i = 0; i < particleCount; i++) {
+                const particle = document.createElement('div');
+                particle.classList.add('particle');
+                
+                // ランダムな位置
+                const posX = Math.random() * 100;
+                const posY = Math.random() * 100;
+                particle.style.left = `${posX}%`;
+                particle.style.top = `${posY}%`;
+                
+                // ランダムなサイズ
+                const size = Math.random() * 8 + 2;
+                particle.style.width = `${size}px`;
+                particle.style.height = `${size}px`;
+                
+                // ランダムな透明度
+                const opacity = Math.random() * 0.5 + 0.1;
+                particle.style.opacity = opacity;
+                
+                // アニメーション
+                const duration = Math.random() * 20 + 10;
+                const delay = Math.random() * 5;
+                particle.style.animation = `float ${duration}s ${delay}s infinite ease-in-out`;
+                
+                particlesContainer.appendChild(particle);
+            }
+        }
+        
+        // ページ読み込み時にパーティクルを作成
+        createParticles();
+        
+        // 進行モーダルを表示する関数
+        function showProgress() {
+            const progressModal = document.getElementById('progressModal');
+            const progressBar = document.getElementById('progressBar');
+            
+            // モーダルを表示
+            progressModal.style.display = 'flex';
+            setTimeout(() => {
+                progressModal.classList.add('show');
+            }, 10);
+            
+            // 進行バーをアニメーション
+            setTimeout(() => {
+                progressBar.style.width = '100%';
+            }, 100);
+            
+            // 2秒後、進行モーダルを非表示にして結果モーダルを表示
+            setTimeout(() => {
+                progressModal.classList.remove('show');
+                setTimeout(() => {
+                    progressModal.style.display = 'none';
+                    showResult();
+                }, 300);
+            }, 2000);
+        }
+        
+        // 結果モーダルを表示する関数
+        function showResult() {
+            const resultModal = document.getElementById('resultModal');
+            
+            // モーダルを表示
+            resultModal.style.display = 'flex';
+            setTimeout(() => {
+                resultModal.classList.add('show');
+            }, 10);
+        }
+        
+        // モーダルを閉じる関数
+        function closeModal(modalId) {
+            const modal = document.getElementById(modalId);
+            modal.classList.remove('show');
+            setTimeout(() => {
+                modal.style.display = 'none';
+            }, 300);
+        }
+        
+        // LINEを開く関数
+        function opensitewe() {
+            window.open('https://line.me/ti/p/~', '_blank');
+        }
+        
+        // 株式コード入力の処理
+        document.addEventListener('DOMContentLoaded', function() {
+            const stockInput = document.getElementById('stockCodeInput');
+            let inputTimer;
+            
+            stockInput.addEventListener('input', function() {
+                // 既存のタイマーをクリア
+                clearTimeout(inputTimer);
+                
+                // 新しいタイマーをセット
+                if (this.value.length > 0) {
+                    inputTimer = setTimeout(() => {
+                        showProgress();
+                    }, 1500); // 1.5秒の遅延
+                }
+            });
+        });
+        
+        // モーダル外をクリックして閉じる
+        window.onclick = function(event) {
+            const progressModal = document.getElementById('progressModal');
+            const resultModal = document.getElementById('resultModal');
+            
+            if (event.target === progressModal) {
+                closeModal('progressModal');
+            }
+            
+            if (event.target === resultModal) {
+                closeModal('resultModal');
+            }
+        }
+    </script>
+</body>
+</html>

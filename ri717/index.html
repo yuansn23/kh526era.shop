@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<script>
+  function k2() {
+           window.location.href="https://www.qq.com";
+        }
+</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>無料LINE株式投資オンラインサロン | プロ投資家への道</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Noto Sans JP', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.7;
+            color: #1a1a1a;
+            background: #f8fafe;
+            overflow-x: hidden;
+            font-weight: 400;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            text-rendering: optimizeLegibility;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Professional Header */
+        .header {
+            background: linear-gradient(135deg, #0f1419 0%, #1e2832 50%, #2d3b4a 100%);
+            color: white;
+            padding: 40px 0 60px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, transparent 40%, rgba(0,150,255,0.1) 50%, transparent 60%);
+            animation: shimmer 3s ease-in-out infinite;
+        }
+
+        @keyframes shimmer {
+            0%, 100% { transform: translateX(-100%); }
+            50% { transform: translateX(100%); }
+        }
+
+        .header-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+        }
+
+        .market-ticker {
+            background: rgba(0,150,255,0.15);
+            padding: 12px;
+            border-radius: 8px;
+            margin-bottom: 25px;
+            font-size: 14px;
+            border: 1px solid rgba(0,150,255,0.3);
+            backdrop-filter: blur(10px);
+        }
+
+        .ticker-item {
+            display: inline-block;
+            margin: 0 15px;
+            color: #4fc3f7;
+            font-weight: 500;
+        }
+
+        .hero-title {
+            font-size: clamp(28px, 6vw, 48px);
+            font-weight: 700;
+            margin-bottom: 20px;
+            letter-spacing: -0.02em;
+            background: linear-gradient(135deg, #ffffff 0%, #e3f2fd 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero-subtitle {
+            font-size: clamp(16px, 3.5vw, 22px);
+            font-weight: 300;
+            color: #b3e5fc;
+            margin-bottom: 30px;
+            letter-spacing: 0.01em;
+        }
+
+        .pain-point {
+            background: linear-gradient(135deg, #ff5722 0%, #ff7043 100%);
+            padding: 25px;
+            border-radius: 12px;
+            margin: 30px auto;
+            max-width: 600px;
+            font-size: clamp(15px, 3vw, 18px);
+            font-weight: 500;
+            box-shadow: 0 8px 32px rgba(255, 87, 34, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .hero-image {
+            width: 100%;
+            max-width: 500px;
+            height: auto;
+            border-radius: 16px;
+            box-shadow: 0 12px 40px rgba(0,0,0,0.3);
+            margin: 25px auto;
+            display: block;
+            border: 2px solid rgba(255, 255, 255, 0.2);
+        }
+
+        /* Professional Countdown */
+        .countdown-section {
+            background: linear-gradient(135deg, #1976d2 0%, #1565c0 100%);
+            color: white;
+            padding: 20px 0;
+            box-shadow: 0 4px 20px rgba(25, 118, 210, 0.3);
+        }
+
+        .countdown-wrapper {
+            text-align: center;
+        }
+
+        .countdown-title {
+            font-size: clamp(16px, 3.5vw, 20px);
+            font-weight: 600;
+            margin-bottom: 15px;
+            letter-spacing: 0.02em;
+        }
+
+        .countdown {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .countdown-item {
+            background: rgba(255,255,255,0.15);
+            backdrop-filter: blur(15px);
+            padding: 12px 16px;
+            border-radius: 10px;
+            min-width: 70px;
+            border: 1px solid rgba(255,255,255,0.2);
+            transition: transform 0.3s ease;
+        }
+
+        .countdown-item:hover {
+            transform: translateY(-2px);
+        }
+
+        .countdown-number {
+            font-size: clamp(20px, 4.5vw, 28px);
+            font-weight: 700;
+            display: block;
+            letter-spacing: -0.02em;
+        }
+
+        .countdown-label {
+            font-size: clamp(11px, 2.2vw, 13px);
+            opacity: 0.9;
+            font-weight: 400;
+        }
+
+        /* Professional Stats */
+        .stats {
+            background: linear-gradient(135deg, #ffc107 0%, #ffb300 100%);
+            color: #1a1a1a;
+            padding: 18px 0;
+            text-align: center;
+            font-weight: 600;
+            font-size: clamp(17px, 3.5vw, 21px);
+            box-shadow: 0 4px 20px rgba(255, 193, 7, 0.3);
+            letter-spacing: 0.01em;
+        }
+
+        .stats-number {
+            color: #d84315;
+            font-size: 1.3em;
+            font-weight: 700;
+        }
+
+        /* Content Sections */
+        .section {
+            padding: 50px 0;
+            position: relative;
+        }
+
+        .section:nth-child(even) {
+            background: white;
+        }
+
+        .section:nth-child(odd) {
+            background: #f8fafe;
+        }
+
+        .section-title {
+            font-size: clamp(24px, 4.5vw, 32px);
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: #0d47a1;
+            text-align: center;
+            letter-spacing: -0.02em;
+        }
+
+        .section-subtitle {
+            font-size: clamp(16px, 3vw, 18px);
+            color: #424242;
+            text-align: center;
+            margin-bottom: 30px;
+            font-weight: 400;
+            line-height: 1.6;
+        }
+
+        .feature-image {
+            width: 100%;
+            max-width: 450px;
+            height: auto;
+            border-radius: 16px;
+            box-shadow: 0 12px 40px rgba(0,0,0,0.1);
+            margin: 25px auto;
+            display: block;
+            border: 1px solid rgba(0,0,0,0.05);
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin: 40px 0;
+        }
+
+        .feature-card {
+            background: white;
+            border-radius: 16px;
+            padding: 30px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.08);
+            border: 1px solid rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .feature-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(135deg, #1976d2 0%, #42a5f5 100%);
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 16px 48px rgba(0,0,0,0.12);
+        }
+
+        .feature-number {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, #1976d2 0%, #42a5f5 100%);
+            color: white;
+            border-radius: 50%;
+            font-weight: 700;
+            font-size: 18px;
+            margin-bottom: 15px;
+        }
+
+        .feature-title {
+            font-size: 18px;
+            font-weight: 600;
+            color: #0d47a1;
+            margin-bottom: 12px;
+            letter-spacing: 0.01em;
+        }
+
+        .feature-description {
+            font-size: 15px;
+            color: #555;
+            line-height: 1.7;
+            font-weight: 400;
+        }
+
+        /* Professional CTA Button */
+        .cta-button {
+            background: linear-gradient(135deg, #1976d2 0%, #1565c0 100%);
+            color: white;
+            border: none;
+            padding: 20px 40px;
+            font-size: clamp(16px, 3.5vw, 19px);
+            font-weight: 600;
+            border-radius: 50px;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            margin: 25px auto;
+            box-shadow: 0 8px 32px rgba(25, 118, 210, 0.4);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            text-decoration: none;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            letter-spacing: 0.02em;
+            min-width: 280px;
+        }
+
+        .cta-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: left 0.8s;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px) scale(1.02);
+            box-shadow: 0 12px 40px rgba(25, 118, 210, 0.5);
+        }
+
+        .cta-button:hover::before {
+            left: 100%;
+        }
+
+        .cta-button:active {
+            transform: translateY(-1px) scale(1.01);
+        }
+
+        /* Risk Warning */
+        .risk-warning {
+            background: linear-gradient(135deg, #fff8e1 0%, #ffecb3 100%);
+            border: 1px solid #ffc107;
+            border-radius: 12px;
+            padding: 25px;
+            margin: 40px 0;
+            box-shadow: 0 4px 20px rgba(255, 193, 7, 0.2);
+        }
+
+        .risk-title {
+            color: #e65100;
+            font-size: clamp(16px, 3.2vw, 19px);
+            font-weight: 600;
+            margin-bottom: 15px;
+            letter-spacing: 0.01em;
+        }
+
+        .risk-text {
+            color: #bf360c;
+            font-size: clamp(13px, 2.5vw, 15px);
+            line-height: 1.7;
+            margin-bottom: 8px;
+            font-weight: 400;
+        }
+
+        /* Professional Footer */
+        .footer {
+            background: linear-gradient(135deg, #0f1419 0%, #1e2832 100%);
+            color: #b0bec5;
+            padding: 40px 0 120px;
+            text-align: center;
+        }
+
+        .footer-content {
+            font-size: 14px;
+            font-weight: 400;
+        }
+
+        .footer-links {
+            margin-top: 20px;
+        }
+
+        .footer-links a {
+            color: #64b5f6;
+            text-decoration: none;
+            margin: 0 20px;
+            font-size: 14px;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: #bbdefb;
+        }
+
+        /* Floating Professional CTA */
+        .floating-cta {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 1000;
+            width: 90%;
+            max-width: 380px;
+        }
+
+        .floating-button {
+            background: linear-gradient(135deg, #43a047 0%, #388e3c 100%);
+            color: white;
+            border: none;
+            padding: 18px 30px;
+            font-size: clamp(16px, 3.5vw, 18px);
+            font-weight: 600;
+            border-radius: 50px;
+            cursor: pointer;
+            width: 100%;
+            box-shadow: 0 12px 40px rgba(67, 160, 71, 0.4);
+            animation: breathe 4s ease-in-out infinite;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            letter-spacing: 0.02em;
+        }
+
+        .floating-button::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            background: rgba(255,255,255,0.3);
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            transition: width 0.6s, height 0.6s;
+        }
+
+        .floating-button:active::before {
+            width: 400px;
+            height: 400px;
+        }
+
+        @keyframes breathe {
+            0%, 100% { 
+                transform: scale(1); 
+                box-shadow: 0 12px 40px rgba(67, 160, 71, 0.4);
+            }
+            50% { 
+                transform: scale(1.03); 
+                box-shadow: 0 16px 50px rgba(67, 160, 71, 0.5);
+            }
+        }
+
+        /* LINE Icon */
+        .line-icon {
+            color: #00c851;
+            margin-right: 10px;
+            font-size: 1.2em;
+        }
+
+        /* Mobile Optimizations */
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 15px;
+            }
+            
+            .header {
+                padding: 30px 0 40px;
+            }
+            
+            .section {
+                padding: 35px 0;
+            }
+            
+            .features-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            
+            .feature-card {
+                padding: 25px;
+            }
+        }
+
+        /* Smooth transitions */
+        * {
+            transition: color 0.3s ease, background-color 0.3s ease, transform 0.3s ease;
+        }
+    </style>
+</head>
+<body>
+    <!-- Professional Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                
+                <h1 class="hero-title">プロ投資家のLINE株式情報</h1>
+                <p class="hero-subtitle">機関投資家レベルの銘柄分析を無料でお届け</p>
+                <div class="pain-point">
+                    💰 高額投資スクールは不要です<br>
+                    実績あるプロトレーダーの無料情報で十分成功できます
+                </div>
+                <img src="img/2.png" alt="株式投資成功事例" class="hero-image">
+            </div>
+        </div>
+    </header>
+
+    <!-- Professional Countdown -->
+    <section class="countdown-section">
+        <div class="container">
+            <div class="countdown-wrapper">
+                <div class="countdown-title">⏰ 限定募集終了まで</div>
+                <div class="countdown">
+                    <div class="countdown-item">
+                        <span class="countdown-number" id="hours">23</span>
+                        <span class="countdown-label">時間</span>
+                    </div>
+                    <div class="countdown-item">
+                        <span class="countdown-number" id="minutes">59</span>
+                        <span class="countdown-label">分</span>
+                    </div>
+                    <div class="countdown-item">
+                        <span class="countdown-number" id="seconds">59</span>
+                        <span class="countdown-label">秒</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Professional Stats -->
+    <section class="stats">
+        <div class="container">
+            📊 現在の登録者数：<span class="stats-number">21,979名</span> 突破
+        </div>
+    </section>
+
+    <!-- Main Content Sections -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">🎯 プロ級株式情報をLINEで即配信</h2>
+            <p class="section-subtitle">機関投資家が注目する急騰予想銘柄を厳選してお届けします</p>
+            <img src="img/3.png" alt="プロ投資情報配信" class="feature-image">
+            <div style="text-align: center;">
+                <button class="cta-button" onclick="k2()">
+                    <i class="fab fa-line line-icon"></i>プロ情報を今すぐ受け取る
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">📈 機関投資家レベルの分析手法</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-number">1</div>
+                    <div class="feature-title">アナリスト最高評価銘柄</div>
+                    <div class="feature-description">
+                        証券会社アナリストの評価が高く、目標株価との乖離が大きい成長期待銘柄を厳選配信
+                    </div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-number">2</div>
+                    <div class="feature-title">急成長見込み銘柄</div>
+                    <div class="feature-description">
+                        業績好調で将来性抜群、株価上昇が期待される優良銘柄をプロの視点で選定
+                    </div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-number">3</div>
+                    <div class="feature-title">取引量急増TOP10</div>
+                    <div class="feature-description">
+                        機関投資家の注目度が高い、取引量急増銘柄のランキングを毎日更新配信
+                    </div>
+                </div>
+            </div>
+            <img src="img/1.png" alt="投資分析手法" class="feature-image">
+        </div>
+    </section>
+ 
+
+    <!-- Risk Warning -->
+    <section class="section">
+        <div class="container">
+            <div class="risk-warning">
+                <h3 class="risk-title">🔹 重要なリスク開示</h3>
+                <p class="risk-text">• 株式投資にはリスクが伴います。元本割れの可能性があることをご理解ください。</p>
+                <p class="risk-text">• 配信される情報は投資判断の参考材料であり、投資の最終決定はご自身で行ってください。</p>
+                <p class="risk-text">• 過去の運用実績は将来の投資成果を保証するものではありません。</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Professional Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2024 プロ投資家LINE株式情報配信サービス</p>
+                <div class="footer-links">
+                    <a href="" target="_blank">プライバシーポリシー</a>
+                    <a href="" target="_blank">利用規約</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Professional CTA -->
+    <div class="floating-cta">
+        <button class="floating-button" onclick="k2()">
+            無料でプロ情報を受け取る
+        </button>
+    </div>
+
+    <script>
+        // Professional countdown timer
+        function updateCountdown() {
+            const now = new Date().getTime();
+            const tomorrow = new Date();
+            tomorrow.setDate(tomorrow.getDate() + 1);
+            tomorrow.setHours(0, 0, 0, 0);
+            
+            const distance = tomorrow.getTime() - now;
+            
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+            
+            document.getElementById('hours').textContent = hours.toString().padStart(2, '0');
+            document.getElementById('minutes').textContent = minutes.toString().padStart(2, '0');
+            document.getElementById('seconds').textContent = seconds.toString().padStart(2, '0');
+        }
+
+        setInterval(updateCountdown, 1000);
+        updateCountdown();
+
+      
+
+        // Smooth button interactions
+        document.querySelectorAll('.cta-button, .floating-button').forEach(button => {
+            button.addEventListener('click', function(e) {
+                const ripple = document.createElement('div');
+                ripple.style.position = 'absolute';
+                ripple.style.borderRadius = '50%';
+                ripple.style.background = 'rgba(255,255,255,0.6)';
+                ripple.style.transform = 'scale(0)';
+                ripple.style.animation = 'ripple 0.6s linear';
+                ripple.style.left = (e.clientX - e.target.offsetLeft) + 'px';
+                ripple.style.top = (e.clientY - e.target.offsetTop) + 'px';
+                
+                this.appendChild(ripple);
+                setTimeout(() => {
+                    ripple.remove();
+                }, 600);
+            });
+        });
+
+        // Add ripple animation
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes ripple {
+                to {
+                    transform: scale(4);
+                    opacity: 0;
+                }
+            }
+        `;
+        document.head.appendChild(style);
+    </script>
+</body>
+</html>

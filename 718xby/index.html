@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1478790049813446');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1478790049813446&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inversión Inteligente - Estrategias Profesionales</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary-gold': '#FFD700',
+                        'primary-navy': '#1B365D',
+                        'accent-amber': '#F59E0B',
+                        'deep-ocean': '#0F172A',
+                        'light-gold': '#FEF3C7',
+                        'navy-light': '#334155'
+                    },
+                    fontFamily: {
+                        'primary-sans': ['Inter', 'sans-serif'],
+                        'secondary-serif': ['Playfair Display', 'serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="bg-white dark:bg-deep-ocean font-primary-sans antialiased">
+    <script>
+        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            document.documentElement.classList.add('dark');
+        }
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
+            if (event.matches) {
+                document.documentElement.classList.add('dark');
+            } else {
+                document.documentElement.classList.remove('dark');
+            }
+        });
+    </script>
+
+    <!-- Navigation Header -->
+    <nav class="navigation-header-container bg-primary-navy dark:bg-deep-ocean shadow-lg sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <h1 class="company-brand-title text-2xl font-bold text-primary-gold">InvestPro Elite</h1>
+                </div>
+                <div class="hidden md:block">
+                    <button class="cta-primary-button bg-primary-gold text-primary-navy px-6 py-2 rounded-full font-semibold hover:bg-accent-amber transition-colors duration-300">
+                        Únete Ahora
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-introduction-section bg-gradient-to-br from-primary-navy via-navy-light to-deep-ocean text-white" style="padding-top: 1rem; padding-bottom: 1rem;">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Countdown Timer -->
+            <div class="countdown-timer-container bg-primary-gold text-primary-navy rounded-2xl p-6 mb-12 text-center">
+                <h3 class="countdown-title text-xl font-bold mb-4">⏰ Oferta Limitada - Solo queda:</h3>
+                <div class="countdown-display flex justify-center items-center space-x-2 sm:space-x-4 text-2xl sm:text-3xl font-bold">
+                    <div class="time-unit-container bg-primary-navy text-primary-gold px-3 py-2 rounded-lg">
+                        <span id="countdown-minutes" class="time-digit">09</span>
+                        <div class="time-label text-xs">MIN</div>
+                    </div>
+                    <span class="time-separator">:</span>
+                    <div class="time-unit-container bg-primary-navy text-primary-gold px-3 py-2 rounded-lg">
+                        <span id="countdown-seconds" class="time-digit">59</span>
+                        <div class="time-label text-xs">SEG</div>
+                    </div>
+                    <span class="time-separator">:</span>
+                    <div class="time-unit-container bg-primary-navy text-primary-gold px-3 py-2 rounded-lg">
+                        <span id="countdown-milliseconds" class="time-digit">99</span>
+                        <div class="time-label text-xs">MS</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="hero-content-wrapper">
+                     
+                    <h2 class="main-headline-text text-4xl lg:text-5xl font-secondary-serif font-bold mb-6 leading-tight">
+                        ¿Crees que la inversión exitosa solo pertenece a quienes tienen conocimientos profesionales?
+                    </h2>
+                    <p class="subheading-description text-xl mb-8 text-gray-200 leading-relaxed border-l-4 border-primary-gold pl-6">
+                        En realidad, muchos inversores exitosos han alcanzado el éxito a través de recursos gratuitos y apoyo comunitario.
+                    </p>
+                    <button class="primary-action-button bg-primary-gold text-primary-navy px-8 py-4 rounded-full text-lg font-bold hover:bg-accent-amber transform hover:scale-105 transition-all duration-300 shadow-2xl relative overflow-hidden">
+                        <span class="relative z-10 flex items-center">
+                            🚀 Únete Inmediatamente
+                        </span>
+                        <div class="absolute inset-0 bg-gradient-to-r from-transparent via-white to-transparent opacity-0 hover:opacity-20 transform -skew-x-12 transition-all duration-500"></div>
+                    </button>
+                </div>
+                <div class="hero-image-container">
+                    <img src="img/2.jpg" alt="Estrategias de Inversión Profesional" class="professional-image rounded-2xl shadow-2xl w-full h-auto">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Expert Warning Section -->
+    <section class="expert-warning-section bg-white dark:bg-gray-900" style="padding-top: 1rem; padding-bottom: 1rem;">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                
+                <h3 class="expert-section-title text-3xl lg:text-4xl font-secondary-serif font-bold text-primary-navy dark:text-primary-gold mb-8">
+                    Asesoramiento de inversión del experto en inversiones Pedro
+                </h3>
+                <div class="expert-image-wrapper max-w-32 mx-auto mb-8">
+                    <img src="img/4.jpg" alt="Pedro Burbaum - Estratega Económico" class="expert-portrait rounded-full shadow-2xl w-full h-full aspect-square object-cover border-4 border-primary-gold">
+                </div>
+            </div>
+            
+            <div class="expert-content-wrapper max-w-4xl mx-auto text-center">
+                <div class="expert-credentials-banner mb-6 flex justify-center space-x-4 text-sm">
+                    <span class="bg-primary-gold text-primary-navy px-3 py-1 rounded-full font-semibold">🏆 25+ Años Experiencia</span>
+                    <span class="bg-primary-gold text-primary-navy px-3 py-1 rounded-full font-semibold">📈 98% Precisión</span>
+                    <span class="bg-primary-gold text-primary-navy px-3 py-1 rounded-full font-semibold">⭐ Top 1% España</span>
+                </div>
+                
+                <div class="quote-decoration mb-6">
+                    <span class="text-primary-gold text-6xl font-secondary-serif">"</span>
+                </div>
+                <p class="expert-warning-text text-xl text-gray-700 dark:text-gray-300 mb-6 leading-relaxed bg-light-gold dark:bg-navy-light p-8 rounded-2xl italic border-l-4 border-red-500">
+                    Uno de los estrategas económicos más influyentes de España, Pedro Burbaum, emite una severa advertencia: Tus ahorros se devalúan cada día, la inflación está vaciando tu cartera sin que te des cuenta. Con años de experiencia, revela un hecho perturbador: solo quienes dominan las estrategias correctas pueden sobrevivir y ganar en el próximo ciclo económico.
+                </p>
+                
+                
+                
+                <button class="secondary-action-button bg-primary-navy dark:bg-primary-gold text-white dark:text-primary-navy px-8 py-4 rounded-full text-lg font-bold hover:bg-navy-light dark:hover:bg-accent-amber transform hover:scale-105 transition-all duration-300 shadow-xl relative overflow-hidden">
+                    <span class="relative z-10 flex items-center justify-center">
+                        ⭐ Únete Inmediatamente
+                    </span>
+                    <div class="absolute inset-0 bg-gradient-to-r from-transparent via-white to-transparent opacity-0 hover:opacity-10 transform -skew-x-12 transition-all duration-500"></div>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Registration Form Section -->
+    <section class="registration-form-section bg-primary-gold py-20">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="form-container-wrapper bg-white rounded-3xl shadow-2xl p-8 lg:p-12">
+                <h4 class="form-headline-title text-3xl font-secondary-serif font-bold text-primary-navy text-center mb-4">
+                    Transforma Tu Futuro Financiero
+                </h4>
+                <p class="form-subtitle-description text-lg text-gray-600 text-center mb-8">
+                    Solo completa el formulario, 30 segundos pueden cambiar tu futuro financiero. ¡Este grupo está limitado a personas verdaderamente comprometidas con el crecimiento financiero!
+                </p>
+                
+                <form class="investment-registration-form space-y-6" onsubmit="handleFormSubmission(event)">
+                    <div class="input-field-container">
+                        <label class="form-input-label block text-sm font-semibold text-gray-700 mb-2">Nombre Completo</label>
+                        <input type="text" class="form-text-input w-full px-4 py-3 text-base border-2 border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-navy focus:border-transparent transition-all duration-300" required>
+                    </div>
+                    
+                    <div class="select-field-container">
+                        <label class="form-select-label block text-sm font-semibold text-gray-700 mb-2">Tu Nivel de Inversión</label>
+                        <select class="form-dropdown-select w-full px-4 py-3 text-base border-2 border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-navy focus:border-transparent transition-all duration-300" required>
+                            <option value="">Selecciona tu nivel</option>
+                            <option value="principiante">Principiante</option>
+                            <option value="intermedio">Intermedio</option>
+                            <option value="avanzado">Avanzado</option>
+                        </select>
+                    </div>
+                    
+                    <div class="commitment-field-container">
+                        <label class="form-commitment-label block text-sm font-semibold text-gray-700 mb-2">¿Quieres cambiar tu futuro financiero?</label>
+                        <select class="form-commitment-select w-full px-4 py-3 text-base border-2 border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-navy focus:border-transparent transition-all duration-300" required>
+                            <option value="">Selecciona tu respuesta</option>
+                            <option value="si">Sí</option>
+                            <option value="no">No</option>
+                        </select>
+                    </div>
+                    
+                    <button type="submit" class="form-submission-button w-full bg-primary-navy text-white py-4 px-8 rounded-lg text-base sm:text-lg font-bold hover:bg-navy-light transform hover:scale-105 transition-all duration-300 shadow-lg relative overflow-hidden">
+                        <span class="relative z-10 flex items-center justify-center whitespace-nowrap">
+                            Iniciar Mi Transformación Financiera
+                        </span>
+                        <div class="absolute inset-0 bg-gradient-to-r from-transparent via-white to-transparent opacity-0 hover:opacity-10 transform -skew-x-12 transition-all duration-500"></div>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Investment Challenges Section -->
+    <section class="investment-challenges-section bg-white dark:bg-gray-900 py-20">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="challenges-content-wrapper">
+                    <h5 class="challenges-section-title text-3xl lg:text-4xl font-secondary-serif font-bold text-primary-navy dark:text-primary-gold mb-8">
+                        Desafíos Comunes en el Mercado de Valores
+                    </h5>
+                    
+                    <div class="challenges-list-container space-y-6">
+                        <div class="challenge-item-wrapper bg-light-gold dark:bg-navy-light p-6 rounded-xl">
+                            <h6 class="challenge-question-title text-xl font-bold text-primary-navy dark:text-primary-gold mb-3">
+                                1. ¿Cómo elegir las acciones adecuadas para invertir?
+                            </h6>
+                            <p class="challenge-answer-text text-gray-700 dark:text-gray-300">
+                                Muchos inversores se sienten confundidos por la información del mercado y no saben cómo evaluar el potencial de una acción.
+                            </p>
+                        </div>
+                        
+                        <div class="challenge-item-wrapper bg-light-gold dark:bg-navy-light p-6 rounded-xl">
+                            <h6 class="challenge-question-title text-xl font-bold text-primary-navy dark:text-primary-gold mb-3">
+                                2. ¿Cómo responder ante la volatilidad del mercado?
+                            </h6>
+                            <p class="challenge-answer-text text-gray-700 dark:text-gray-300">
+                                Ante fluctuaciones drásticas de precios, los inversores tienden a entrar en pánico. Dominar la gestión de riesgos y la preparación psicológica te ayudará a mantener la calma.
+                            </p>
+                        </div>
+                        
+                        <div class="challenge-item-wrapper bg-light-gold dark:bg-navy-light p-6 rounded-xl">
+                            <h6 class="challenge-question-title text-xl font-bold text-primary-navy dark:text-primary-gold mb-3">
+                                3. ¿Mantener a largo plazo o comprar y vender a corto plazo?
+                            </h6>
+                            <p class="challenge-answer-text text-gray-700 dark:text-gray-300">
+                                Diferentes estrategias de inversión se adaptan a diferentes condiciones del mercado. Saber cuándo mantener y cuándo vender decisivamente es clave para el éxito.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+               
+            </div>
+        </div>
+    </section>
+
+    <!-- Community Benefits Section -->
+    <section class="community-benefits-section bg-gradient-to-br from-primary-navy via-navy-light to-deep-ocean text-white py-20">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="benefits-image-container">
+                    <img src="img/3.jpg" alt="Comunidad de Inversores Elite" class="community-image rounded-2xl shadow-2xl w-full h-auto">
+                </div>
+                
+                <div class="benefits-content-wrapper">
+                    <h7 class="benefits-section-title text-3xl lg:text-4xl font-secondary-serif font-bold text-primary-gold mb-6">
+                        Únete a Nuestra Comunidad Elite
+                    </h7>
+                    <p class="benefits-introduction-text text-xl mb-8 text-gray-200 leading-relaxed">
+                        Para ayudarte a mantenerte a la vanguardia, hemos creado una comunidad gratuita de aprendizaje de inversión en acciones donde aprenderás a ver el mercado desde la perspectiva de los mejores inversores.
+                    </p>
+                    
+                    <div class="benefits-list-container space-y-4 mb-8">
+                        <div class="benefit-item-wrapper flex items-center">
+                            <span class="benefit-icon text-primary-gold text-2xl mr-4">✓</span>
+                            <span class="benefit-text text-lg">Técnicas de inversión prácticas y aplicables</span>
+                        </div>
+                        <div class="benefit-item-wrapper flex items-center">
+                            <span class="benefit-icon text-primary-gold text-2xl mr-4">✓</span>
+                            <span class="benefit-text text-lg">Análisis de acciones y tendencias globales</span>
+                        </div>
+                        <div class="benefit-item-wrapper flex items-center">
+                            <span class="benefit-icon text-primary-gold text-2xl mr-4">✓</span>
+                            <span class="benefit-text text-lg">Acceso gratuito a la comunidad de inversores leales (sin anuncios, sin interrupciones)</span>
+                        </div>
+                    </div>
+                    
+                    <button class="final-cta-button bg-primary-gold text-primary-navy px-8 py-4 rounded-full text-lg font-bold hover:bg-accent-amber transform hover:scale-105 transition-all duration-300 shadow-2xl relative overflow-hidden">
+                        <span class="relative z-10 flex items-center justify-center">
+                            🎯 Únete al Círculo Elite de Inversores
+                        </span>
+                        <div class="absolute inset-0 bg-gradient-to-r from-transparent via-white to-transparent opacity-0 hover:opacity-20 transform -skew-x-12 transition-all duration-500"></div>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- User Testimonials Section -->
+    <section class="user-testimonials-section bg-white dark:bg-gray-900 py-20">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h8 class="testimonials-title text-3xl lg:text-4xl font-secondary-serif font-bold text-primary-navy dark:text-primary-gold text-center mb-12">
+                Lo Que Dicen Nuestros Miembros
+            </h8>
+            
+            <div class="testimonials-container grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Container 1 -->
+                <div class="testimonials-group-1 relative bg-gray-100 dark:bg-gray-800 rounded-lg p-6 min-h-32">
+                    <div class="testimonial-card bg-light-gold dark:bg-navy-light p-4 rounded-lg shadow-lg opacity-0 transition-opacity duration-500">
+                        <div class="user-info mb-3">
+                            <div class="user-name text-sm font-semibold text-primary-navy dark:text-primary-gold"></div>
+                        </div>
+                        <p class="testimonial-text text-sm text-gray-700 dark:text-gray-300 mb-2"></p>
+                        <div class="rating text-primary-gold text-sm">⭐⭐⭐⭐⭐</div>
+                    </div>
+                </div>
+                
+                <!-- Container 2 -->
+                <div class="testimonials-group-2 relative bg-gray-100 dark:bg-gray-800 rounded-lg p-6 min-h-32">
+                    <div class="testimonial-card bg-light-gold dark:bg-navy-light p-4 rounded-lg shadow-lg opacity-0 transition-opacity duration-500">
+                        <div class="user-info mb-3">
+                            <div class="user-name text-sm font-semibold text-primary-navy dark:text-primary-gold"></div>
+                        </div>
+                        <p class="testimonial-text text-sm text-gray-700 dark:text-gray-300 mb-2"></p>
+                        <div class="rating text-primary-gold text-sm">⭐⭐⭐⭐⭐</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Risk Disclosure Footer -->
+    <footer class="risk-disclosure-footer bg-gray-100 dark:bg-deep-ocean py-12">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="disclaimer-content-wrapper bg-yellow-50 dark:bg-gray-800 border-l-4 border-yellow-400 p-6 rounded-lg mb-8">
+                <h8 class="warning-title text-xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+                    <span class="warning-icon text-yellow-500 text-2xl mr-2">⚠️</span>
+                    Aviso Importante de Riesgo
+                </h8>
+                
+                <div class="disclaimer-text-container space-y-2 text-sm text-gray-700 dark:text-gray-300">
+                    <p class="disclaimer-point">*Este servicio es solo para referencia, no proporciona servicios de asesoramiento de inversión ni servicios de transacción de productos financieros.</p>
+                    <p class="disclaimer-point">*La información proporcionada es solo para referencia y no debe utilizarse como base para decisiones de inversión.</p>
+                    <p class="disclaimer-point">*El riesgo de las decisiones de inversión finales es asumido por usted mismo.</p>
+                    <p class="disclaimer-point">*No se garantiza la precisión de los datos.</p>
+                </div>
+            </div>
+            
+            <div class="footer-links-container flex flex-col sm:flex-row justify-between items-center space-y-4 sm:space-y-0">
+                <div class="copyright-notice text-gray-600 dark:text-gray-400">
+                    © 2024 InvestPro Elite. Todos los derechos reservados.
+                </div>
+                <div class="legal-links-wrapper space-x-6">
+                    <a href="https://www.baidu.com" class="privacy-policy-link text-primary-navy dark:text-primary-gold hover:underline">Política de Privacidad</a>
+                    <a href="https://www.baidu.com" class="terms-service-link text-primary-navy dark:text-primary-gold hover:underline">Términos de Servicio</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function handleFormSubmission(event) {
+            event.preventDefault();
+              fbq('track', 'AddToCart');
+      fbq('track', 'Purchase');
+            window.open('https://www.qq.com', '_blank');
+        }
+
+        // 10-minute Countdown Timer Function
+        function initializeCountdown() {
+            let totalTime = 10 * 60 * 1000;
+            const startTime = Date.now();
+            
+            function updateCountdown() {
+                const elapsed = Date.now() - startTime;
+                const remaining = Math.max(0, totalTime - elapsed);
+                
+                const minutes = Math.floor(remaining / (1000 * 60));
+                const seconds = Math.floor((remaining % (1000 * 60)) / 1000);
+                const milliseconds = Math.floor((remaining % 1000) / 10);
+                
+                document.getElementById('countdown-minutes').textContent = minutes.toString().padStart(2, '0');
+                document.getElementById('countdown-seconds').textContent = seconds.toString().padStart(2, '0');
+                document.getElementById('countdown-milliseconds').textContent = milliseconds.toString().padStart(2, '0');
+                
+                if (remaining <= 0) {
+                    totalTime = 10 * 60 * 1000;
+                    startTime = Date.now();
+                }
+            }
+            
+            updateCountdown();
+            setInterval(updateCountdown, 10);
+        }
+
+        // Testimonials data - 2 groups of 4 testimonials each
+        const testimonialGroups = [
+            [
+                {name: 'María G.', text: '"¡Increíble! En 3 meses ya recuperé mi inversión inicial."'},
+                {name: 'Carlos R.', text: '"Las estrategias son oro puro. Mi cartera creció 45%."'},
+                {name: 'Ana L.', text: '"Nunca pensé que invertir podría ser tan sencillo."'},
+                {name: 'Jorge M.', text: '"Pedro predijo la caída. No perdí ni un euro."'}
+            ],
+            [
+                {name: 'Lucía P.', text: '"El mejor grupo de inversión de España."'},
+                {name: 'Roberto S.', text: '"Duplicé mi dinero en 6 meses siguiendo las señales."'},
+                {name: 'Patricia F.', text: '"Finalmente entiendo el mercado gracias a Pedro."'},
+                {name: 'Diego T.', text: '"Mis inversiones son exitosas. ¡Recomendado 100%!"'}
+            ]
+        ];
+
+        // Testimonials Animation - 2 containers, each cycling through 4 testimonials
+        function initializeTestimonials() {
+            const group1Container = document.querySelector('.testimonials-group-1 .testimonial-card');
+            const group2Container = document.querySelector('.testimonials-group-2 .testimonial-card');
+            
+            let group1Index = 0;
+            let group2Index = 0;
+            
+            function updateTestimonialContent(container, testimonial) {
+                const name = container.querySelector('.user-name');
+                const text = container.querySelector('.testimonial-text');
+                
+                name.textContent = testimonial.name;
+                text.textContent = testimonial.text;
+            }
+            
+            function showNextTestimonial(groupIndex) {
+                const container = groupIndex === 0 ? group1Container : group2Container;
+                const testimonials = testimonialGroups[groupIndex];
+                const currentIndex = groupIndex === 0 ? group1Index : group2Index;
+                
+                // Hide current testimonial
+                container.style.opacity = '0';
+                
+                setTimeout(() => {
+                    // Update content
+                    updateTestimonialContent(container, testimonials[currentIndex]);
+                    
+                    // Show new testimonial
+                    container.style.opacity = '1';
+                    
+                    // Update index for next iteration
+                    if (groupIndex === 0) {
+                        group1Index = (group1Index + 1) % testimonials.length;
+                    } else {
+                        group2Index = (group2Index + 1) % testimonials.length;
+                    }
+                }, 300);
+            }
+            
+            // Start both groups immediately with different testimonials
+            showNextTestimonial(0);
+            setTimeout(() => showNextTestimonial(1), 1000); // Offset second group by 1 second
+            
+            // Continue cycling every 2 seconds for each group
+            setInterval(() => showNextTestimonial(0), 2500);
+            setInterval(() => showNextTestimonial(1), 2500);
+        }
+
+        // Initialize when page loads
+        document.addEventListener('DOMContentLoaded', function() {
+            initializeCountdown();
+            initializeTestimonials();
+        });
+
+        // Smooth scrolling for CTA buttons
+        document.querySelectorAll('.cta-primary-button, .primary-action-button, .secondary-action-button, .final-cta-button').forEach(button => {
+            button.addEventListener('click', function() {
+                document.querySelector('.registration-form-section').scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Form validation enhancement
+        const formInputs = document.querySelectorAll('.form-text-input, .form-dropdown-select, .form-commitment-select');
+        formInputs.forEach(input => {
+            input.addEventListener('focus', function() {
+                this.classList.add('ring-2', 'ring-primary-gold');
+            });
+            
+            input.addEventListener('blur', function() {
+                this.classList.remove('ring-2', 'ring-primary-gold');
+            });
+        });
+    </script>
+</body>
+</html>
